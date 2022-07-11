@@ -15,7 +15,11 @@ function onNameSubmit(event){
 }
 
 function PrintGreeting(username){
-    greeting.innerText=`Hello ${username}`;
+    if(username==="엄준식"){
+        greeting.innerText=`엄준식이 어떻게 사람이름 ㅋㅋㅋ`;
+    }else{
+        greeting.innerText=`Hello ${username}`;
+    }
     greeting.classList.remove(HIDDENCLASS);
 }
 
