@@ -9,7 +9,7 @@ const quoteList = [
         text: "내가 멀리 볼 수 있었던 것은 거인의 어깨위에 있었기 때문이다.",
         text_original: "If I have seen further it is only by standing on the shoulders of giants.",
         who:"아이작 뉴턴",
-        who_original:"Sir Isaac Newton",
+        who_original:"Isaac Newton",
     },
     {
         text: "당신은 당신이 생각하는 대로 살아야 한다. 그러지 않으면 머지않아 당신은 사는 대로 생각하게 될 것이다.",
@@ -39,10 +39,17 @@ const quoteList = [
         text: "자유는 공짜가 아니다.",
         text_original: "Freedom is not free.",
         who:"미국 속담",
-        who_original:"",
+        who_original:"dfbg",
     },
 ]
 const quote = document.querySelector("#quote span:first-child");
+const quoteOR = document.querySelector("#quote span:nth-child(2)");
+const authorOR = document.querySelector("#quote span:nth-child(4)");
 const author = document.querySelector("#quote span:last-child");
 
-console.log(quoteList[Math.floor(Math.random() * 10)]);
+const RandQuote = quoteList[Math.floor(Math.random() * quoteList.length)];
+quote.innerText = RandQuote.text;
+quoteOR.innerText = RandQuote.text_original;
+author.innerText = RandQuote.who;
+authorOR.innerText = RandQuote.who_original;
+
