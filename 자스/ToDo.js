@@ -1,21 +1,28 @@
 const form = document.getElementById("ToDo-Form");
-const list = document.getElementById("ToDo-List");
-const input = form.querySelector("input");
+const TdList = document.getElementById("ToDo-List");
+const TdInput = form.querySelector("#ToDo-Form input");
 
-function printToDo(inputValue){
-    const listElement = document.createElement("li");
-    const listSpanElement = document.createElement("span");
-    listElement.appendChild(listSpanElement);
-    listSpanElement.innerText=inputValue;
-    list.appendChild(listElement);
+function RemoveTodo(){
+    console.log("wow");
 }
+
+function printToDo(inputTdV){
+    const listElement = document.createElement("li");
+    const SpanElement = document.createElement("span");
+    const ButtonElement = document.createElement("button");
+    ButtonElement.innerText = "🙅‍♂️";
+    ButtonElement.addEventListener("click",RemoveTodo);
+    SpanElement.innerText=inputTdV;
+    listElement.appendChild(SpanElement);
+    listElement.appendChild(ButtonElement);
+    TdList.appendChild(listElement);
+}
+
 function whenSubmitTodo(event){
     event.preventDefault();
-    const inputValue = input.value;
-    input.value = "";
+    const inputValue = TdInput.value;
+    TdInput.value = "";
     printToDo(inputValue);
 }
-
-
 
 form.addEventListener("submit",whenSubmitTodo)
