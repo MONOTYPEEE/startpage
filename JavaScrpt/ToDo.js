@@ -2,6 +2,12 @@ const form = document.getElementById("ToDo-Form");
 const TdList = document.getElementById("ToDo-List");
 const TdInput = form.querySelector("#ToDo-Form input");
 
+const TdStorage = [];
+
+function toDoSave(){
+    localStorage.setItem("TdStorage", JSON.stringify("TdStorage"))
+}
+
 function RemoveTodo(event){
     const removeLi = event.target.parentElement;
     removeLi.remove();
@@ -23,6 +29,7 @@ function whenSubmitTodo(event){
     event.preventDefault();
     const inputValue = TdInput.value;
     TdInput.value = "";
+    TdStorage.push(inputTdV)
     printToDo(inputValue);
 }
 
