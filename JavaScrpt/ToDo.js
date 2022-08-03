@@ -1,11 +1,14 @@
 const form = document.getElementById("ToDo-Form");
-const TdList = document.getElementById("ToDo-List");
-const TdInput = form.querySelector("#ToDo-Form input");
+const toDoList = document.getElementById("ToDo-List");
+const toDoInput = form.querySelector("#ToDo-Form input");
 
-const TdStorage = [];
+let toDoStorage = [];
+const TODOKEY = "ListToDo_LS";
+const storedToDo = localStorage.getItem(TODOKEY);
+const arrlyzed_storedToDo = JSON.parse(storedToDo);
 
 function toDoSave(){
-    localStorage.setItem("TdStorage", JSON.stringify("TdStorage"))
+    localStorage.setItem(TODOKEY, JSON.stringify(toDoStorage));
 }
 
 function RemoveTodo(event){
@@ -13,24 +16,30 @@ function RemoveTodo(event){
     removeLi.remove();
 }
 
-function printToDo(inputTdV){
+function printToDo(inputValue){
     const listElement = document.createElement("li");
     const SpanElement = document.createElement("span");
     const ButtonElement = document.createElement("button");
     ButtonElement.innerText = "X";
     ButtonElement.addEventListener("click",RemoveTodo);
-    SpanElement.innerText=inputTdV;
+    SpanElement.innerText=inputValue;
     listElement.appendChild(SpanElement);
     listElement.appendChild(ButtonElement);
-    TdList.appendChild(listElement);
+    toDoList.appendChild(listElement);
 }
 
 function whenSubmitTodo(event){
     event.preventDefault();
-    const inputValue = TdInput.value;
-    TdInput.value = "";
-    TdStorage.push(inputTdV)
+    const inputValue = toDoInput.value;
+    toDoInput.value = "";
+    toDoStorage.push(inputValue);
     printToDo(inputValue);
+    toDoSave();
 }
 
-form.addEventListener("submit",whenSubmitTodo)
+form.addEventListener("submit",whenSubmitTodo);
+
+if(storedToDo !== null){
+    toDoStorage = arrlyzed_storedToDo;
+    arrlyzed_storedToDo.forEach(printToDo);
+}
