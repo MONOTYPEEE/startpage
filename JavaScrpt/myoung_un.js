@@ -39,7 +39,7 @@ const quoteList = [
         text: "자유는 공짜가 아니다.",
         text_original: "Freedom is not free.",
         who:"미국 속담",
-        who_original:"dfbg",
+        who_original:"",
     },
 ]
 const quote = document.querySelector("#quote span:first-child");
