@@ -2,26 +2,26 @@ const form = document.getElementById("ToDo-Form");
 const toDoList = document.getElementById("ToDo-List");
 const toDoInput = form.querySelector("#ToDo-Form input");
 
-let toDoStorage = [];
+let toDoStorage = []; //ToDo가 저장되는 Array입니다.
 
-const TODOKEY = "ListToDo_LS";
-const storedToDo = localStorage.getItem(TODOKEY);
+const TODOKEY = "ListToDo_LS"; //LocalStorage에 저장되는 ToDo값의 Key
+const storedToDo = localStorage.getItem(TODOKEY); //LocalStorage에 저장되는 ToDo값의 내용
 const arrlyzed_storedToDo = JSON.parse(storedToDo);
 
-function toDoSave(){
+function saveToDo(){ //ToDo를 LocalStorage에 저장합니다
     localStorage.setItem(TODOKEY, JSON.stringify(toDoStorage));
 }
 
-function removeTodo(event){
-    const removeLi = event.target.parentElement;
+function removeTodo(event){ //입력받은 ToDo를 삭제합니다
+    const removeLi = event.target.parentElement; //삭제할 Html Element를 입력받은 const
     removeLi.remove();
-    toDoStorage = toDoStorage.filter((todo) => todo.msid !== parseInt(removeLi.id));
-    toDoSave();
+    toDoStorage = toDoStorage.filter((todo) => todo.id !== parseInt(removeLi.id)); //removeLi를 제외한 Array를 다시 생성
+    saveToDo(); //직전 라인에서 생성한 Array를 LocalStorage에 저장
 }
 
 function printToDo(inputValue){
     const listElement = document.createElement("li");
-    listElement.id = inputValue.msid;
+    listElement.id = inputValue.id;
     const SpanElement = document.createElement("span");
     const ButtonElement = document.createElement("button");
     ButtonElement.innerText = "❌";
@@ -32,20 +32,20 @@ function printToDo(inputValue){
     toDoList.appendChild(listElement);
 }
 
-function whenSubmitTodo(event){
+function submitToDo(event){
     event.preventDefault();   
     const inputValue = toDoInput.value;
     toDoInput.value = "";
     const newToDoObj = {
         text:inputValue,
-        msid: Date.now(),
+        id: Date.now(),
     };
     toDoStorage.push(newToDoObj);
     printToDo(newToDoObj);
-    toDoSave();
+    saveToDo();
 }
 
-form.addEventListener("submit",whenSubmitTodo);
+form.addEventListener("submit",submitToDo);
 
 
 if(storedToDo !== null){
