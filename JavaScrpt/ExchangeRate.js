@@ -6,6 +6,6 @@ const JPYwon = document.querySelector("#exchange span:last-child");
 fetch(exchangeUrl)        
     .then((response) => response.json())
     .then((data) => {
-        USDwon.innerText = `USDKRW=X : ${data[1].rate}`;
-        JPYwon.innerText = `JPYKRW=X : ${data[2].rate}`;
+        USDwon.innerText = `1USD : ${data[1].rate}원`;
+        JPYwon.innerText = `1JPY : ${data[2].rate}원`;
 });
