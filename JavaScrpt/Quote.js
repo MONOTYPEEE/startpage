@@ -43,9 +43,9 @@ const quoteList = [
     },
 ]
 const quote = document.querySelector("#quote span:first-child");
-const quoteOR = document.querySelector("#quote span:nth-child(2)");
-const authorOR = document.querySelector("#quote span:nth-child(4)");
-const author = document.querySelector("#quote span:last-child");
+const quoteOR = document.querySelector("#quote span:nth-of-type(2)");
+const authorOR = document.querySelector("#quote span:nth-of-type(3)");
+const author = document.querySelector("#quote span:last-of-type");
 
 const RandQuote = quoteList[Math.floor(Math.random() * quoteList.length)];
 quote.innerText = RandQuote.text;

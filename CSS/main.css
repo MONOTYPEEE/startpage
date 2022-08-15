@@ -11,5 +11,72 @@ body{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-color: gray;
+}
+
+main#center{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#clock{
+    font-weight: 700;
+    font-size: 3rem;
+    text-shadow: 0 0 5px rgb(125 125 125 / 30%);
+}
+
+#weather{
+    text-align: center;
+    width: 8rem;
+}
+
+#weatherIcon{
+    /*날씨: 아이콘 svg*/
+    height: 10vw;
+    width: 10vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#weather div:first-of-type{
+    /*날씨: 온도 표시 div*/
+    font-size: x-large;
+    font-weight: 700;
+}
+
+#weather div:nth-of-type(2){
+    /*날씨: 글로 표현하는 div*/
+    font-size: large;
+    font-weight: 500;
+}
+
+#weather div:last-of-type{
+    /*날씨: 지역*/
+    margin-top: 1%;
+    font-size: small;
+    font-weight: 800;
+}
+
+.acryl {
+    padding: 1em;
+    border-radius: 8px;
+    border-width: thin;
+    border-style: solid;
+    border-color: #e5e5e5;
+    backdrop-filter: blur(10px);
+    background-color: rgba(247, 247, 247, 0.8);
+    overflow-y: auto;
+    background-image: url('noise.png');
+    background-repeat: repeat;
+    box-shadow: 0px 25.6px 57.6px rgb(0 0 0 / 14%), 0px 0px 16.4px rgb(0 0 0 / 12%);
+}
+
+
+
+.quote-eng{
+
+}
+.quote-who{
+
 }

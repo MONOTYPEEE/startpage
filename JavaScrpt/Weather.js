@@ -1,6 +1,7 @@
-let cityName = document.querySelector("#weather span:first-child");
-let tempFeelLike = document.querySelector("#weather span:nth-child(2)");
-let weatherDes = document.querySelector("#weather span:last-child");
+const tempFeelLike = document.querySelector("#weather div:first-of-type");
+const weatherDes = document.querySelector("#weather div:nth-of-type(2)");
+const cityName = document.querySelector("#weather div:last-of-type");
+const weatherIcon = document.querySelector("#weatherIcon");
 
 function geolocationOK(position){
     const latitude = position.coords.latitude;
@@ -10,8 +11,9 @@ function geolocationOK(position){
         .then((response) => response.json())
         .then((data) => {
             cityName.innerText = data.name;
-            tempFeelLike.innerText = data.main.feels_like;
+            tempFeelLike.innerText = `${Math.ceil(data.main.feels_like)}º`;
             weatherDes.innerText = data.weather[0].description;
+            weatherIcon.style.backgroundImage = `url(./weatherIcon/${data.weather[0].icon}.svg)`;
         });
 }
 
