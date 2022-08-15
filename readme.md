@@ -1,1 +1,3 @@
-대충 리드미라는 얘기
+## Credit
+날씨 아이콘 : https://github.com/microsoft/fluentui-emoji   
+Acryl 이펙트 CSS : https://github.com/yell0wsuit/acrylic-mica-css   
