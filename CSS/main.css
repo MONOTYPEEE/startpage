@@ -18,23 +18,31 @@ main#center{
     align-items: center;
     flex-direction: column;
     text-align: center;
+    color: #fff;
+    mix-blend-mode: difference;
+    text-shadow: 0 0 5px rgb(125 125 125 / 30%);
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 40%;
+    left: 50%;
 }
 
 #clock{
     font-weight: 700;
     font-size: 3rem;
-    text-shadow: 0 0 5px rgb(125 125 125 / 30%);
+    
 }
 
 #weather{
+    /*날씨 요소들 묶는 div*/
     text-align: center;
     width: 8rem;
 }
 
 #weatherIcon{
     /*날씨: 아이콘 svg*/
-    height: 10vw;
-    width: 10vw;
+    height: 4em;
+    width: 4em;
     background-repeat: no-repeat;
     background-size: contain;
 }
