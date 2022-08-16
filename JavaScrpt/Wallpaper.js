@@ -1,40 +1,53 @@
 const wallpaperArray = [
 {
-    fileName:"arcane.jpg",
-    desc:"실코, 징크스, 바이 (아케인: 리그 오브 레전드)",
+    fileName:"4theyouth.jpg",
+    desc:"4 the Youth - JUSTHIS & Paloalto",
 },
 {
-    fileName:"arcane_piltover.jpg",
-    desc:"필드오버의 전경 (아케인: 리그 오브 레전드)",
+    fileName:"7_theEP.jpg",
+    desc:"7 EP - Lil Nas X",
 },
 {
-    fileName:"arcane_zaun.jpg",
-    desc:"자운의 전경 (아케인: 리그 오브 레전드)",
+    fileName:"af.jpg",
+    desc:"af - Woo",
 },
 {
-    fileName:"cruella_trio.jpg",
-    desc:"호레이스, 에스텔라, 재스퍼 (크루엘라)",
+    fileName:"breathe3.jpg",
+    desc:"살아숨셔 3 - 염따",
 },
 {
-    fileName:"newverse_gwen.jpg",
-    desc:"그웬 스테이시 (스파이더맨: 뉴 유니버스)",
+    fileName:"dawn_in_seoul.jpg",
+    desc:"DAWN IN SEOUL - DON MALIK",
 },
 {
-    fileName:"newverse_trio.jpg",
-    desc:"피터 B. 파커, 마일스 모랄레스, 그웬 스테이시 (스파이더맨: 뉴 유니버스)",
+    fileName:"face_n_mask.jpg",
+    desc:"Face & Mask - 키드밀리, dress",
 },
 {
-    fileName:"nowayhome_peterstrange.jpg",
-    desc:"피터 파커, 베네딕트 컴버배치 (스파이더 맨: 노 웨이 홈)",
+    fileName:"indurstry_babi.jpg",
+    desc:"INDURSTRY BABY - Lil Nas X, Jack Harlow",
 },
 {
-    fileName:"nowayhome_trio.jpg",
-    desc:"스파이더맨, 스파이더맨, 스파이더맨 (스파이더 맨: 노 웨이 홈)",
+    fileName:"malik_the_cactus_flower.jpg",
+    desc:"선인장화 - DON MALIK",
 },
 {
-    fileName:"simpsons_movie.jpg",
-    desc:"메기 심슨, 바트 심슨, 마지 심슨, 호머 심슨, 플로퍼 (심슨가족, 더 무비)",
+    fileName:"NEXT_EPISODE.jpg",
+    desc:"NEXT EPISODE - AKMU",
 },
+{
+    fileName:"paid_in_seoul.jpg",
+    desc:"PAID IN SEOUL - DON MALIK",
+},
+{
+    fileName:"sungoes_down.jpg",
+    desc:"SUN GOES DOWN - Lil Nas X",
+},
+{
+    fileName:"x_the_worst.jpg",
+    desc:"X - pH-1",
+},
+
 ];
 const descSlot = document.querySelector("#movie span");
 const chosenImage = wallpaperArray[Math.floor(Math.random() * wallpaperArray.length)];
