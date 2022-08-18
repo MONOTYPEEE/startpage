@@ -13,18 +13,18 @@ body{
     background-attachment: fixed;
 }
 
-main#center{
+#center{
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
     color: #fff;
-    mix-blend-mode: difference;
     text-shadow: 0 0 5px rgb(125 125 125 / 30%);
     transform: translate(-50%,-50%);
     position: absolute;
     top: 40%;
     left: 50%;
+    min-width: 250px;
 }
 
 #clock{
@@ -66,8 +66,19 @@ main#center{
     font-weight: 800;
 }
 
+#wallpaperDesc{
+    position: absolute;
+    
+    left: 30px;
+    bottom: 30px;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: 0 0 6px rgb(0 0 0 / 30%);
+}
+
 .acryl {
-    padding: 1em;
+    padding: 10px;
     border-radius: 8px;
     border-width: thin;
     border-style: solid;
@@ -80,11 +91,120 @@ main#center{
     box-shadow: 0px 25.6px 57.6px rgb(0 0 0 / 14%), 0px 0px 16.4px rgb(0 0 0 / 12%);
 }
 
-
-
-.quote-eng{
-
+#toDo{
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    bottom: 30px;
+    right: 30px;
 }
-.quote-who{
 
+#toDo>span{
+    border-color: #d1d1d1 #d1d1d1 #616161 #d1d1d1;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    min-height: 32px;
+    position: relative;
+    border-radius: 4px;
+    row-gap: 2px;
+    column-gap: 2px;
+    line-height: 20px;
+    font-weight: 400;
+    background-color: white;
+}
+
+/*이쁜 Fluent Input를 만드려던 흔적
+#toDo>span::after{
+    content: "";
+    transform: scaleX(0);
+    clip-path: inset(calc(100% - 2px) 0px 0px);
+    border-bottom: solid 2px red;
+    bottom: -1px;
+    right: -1px;
+    left: -1px;
+    position: absolute;
+    box-sizing: border-box;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    transition: transform 50ms cubic-bezier(0.7,0,1,0.5);
+    height: max(2px, 4px);
+}*/
+
+#ToDo-Form>input{
+    background-color: transparent;
+    padding: 0px 2px;
+    border: none;
+    outline: none;
+    min-width: 0px;
+    box-sizing: border-box;
+    line-height: 30px;
+    font-weight: 400;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+#ToDo-List{
+    margin: 0px 0px 10px 0px;
+    padding: 5px;
+    list-style: none;
+}
+
+#ToDo-List>li>button{
+    background-color: #000000;
+    color: #fff;
+    font-weight: 900;
+    font-size: small;
+    height: 25px;
+    border-radius: 888px;
+    margin: 5px 5px 0px 0px;
+    opacity: 0.2;
+    transition: box-shadow 200ms, opacity 200ms;
+}
+
+#ToDo-List>li>button:hover{
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.4); 
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.4);
+    background-color: #000000;
+    opacity: 0.5;
+    transition: box-shadow 200ms, opacity 200ms;
+}
+
+#exchange {
+    width: 8rem;
+    margin-top: 10px;
+    font-size: small;
+    font-weight: 900;
+    color: rgba(0,0,0,0.4);
+}
+
+#exchangeCost {
+    font-size: x-large;
+    font-weight: 600;
+    color: #000;
+}
+
+#greeting{
+    font-size: x-large;
+    font-weight: 700;
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+.quote-who{
+    color: rgba(255,255,255,0.7);
+    font-weight: 200;
+    font-style: italic;
+    margin: 0px 5px;
+    font-family:cursive;
+}
+.quote-eng{
+    font-weight: 400;
+    color: rgba(255,255,255,0.8);
+}
+#quote span:first-of-type{
+    font-weight: 600;
+    font-size: larger;
 }

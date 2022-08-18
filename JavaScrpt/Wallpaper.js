@@ -9,7 +9,7 @@ const wallpaperArray = [
 },
 {
     fileName:"af.jpg",
-    desc:"af - Woo",
+    desc:"af - 우원재",
 },
 {
     fileName:"breathe3.jpg",
@@ -49,7 +49,7 @@ const wallpaperArray = [
 },
 
 ];
-const descSlot = document.querySelector("#movie span");
+const descSlot = document.querySelector("#wallpaperDesc span");
 const chosenImage = wallpaperArray[Math.floor(Math.random() * wallpaperArray.length)];
 
 descSlot.innerText = chosenImage.desc;

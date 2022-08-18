@@ -22,13 +22,14 @@ function removeTodo(event){ //입력받은 ToDo를 삭제합니다
 function printToDo(inputValue){
     const listElement = document.createElement("li");
     listElement.id = inputValue.id;
-    const SpanElement = document.createElement("span");
     const ButtonElement = document.createElement("button");
-    ButtonElement.innerText = "❌";
+    const SpanElement = document.createElement("span");
+    ButtonElement.innerText = "삭제";
     ButtonElement.addEventListener("click",removeTodo);
     SpanElement.innerText = inputValue.text;
-    listElement.appendChild(SpanElement);
+    //SpanElement.id = "toDoListTxt";
     listElement.appendChild(ButtonElement);
+    listElement.appendChild(SpanElement);
     toDoList.appendChild(listElement);
 }
 

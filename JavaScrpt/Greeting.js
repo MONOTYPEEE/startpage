@@ -18,7 +18,7 @@ function PrintGreeting(username){
     if(username==="엄준식"){
         greeting.innerText=`엄준식이 어떻게 사람이름 ㅋㅋㅋ`;
     }else{
-        greeting.innerText=`Hello ${username}`;
+        greeting.innerText=`반가워요 ${username}님`;
     }
     greeting.classList.remove(HIDDENCLASS);
 }

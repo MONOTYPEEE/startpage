@@ -6,8 +6,8 @@
         <meta charset="UTF-8">
         <title>스타트페이지</title>
     </head>
-    <body>
-
+<body>
+    <div id>
         <div id="weather" class="acryl">
             <svg id="weatherIcon">
             </svg>
@@ -17,7 +17,17 @@
             <div></div>
         </div>
 
-<main id="center">
+        <div id="exchange" class="acryl">
+            1 미국 달러
+            <div id="exchangeCost"></div>
+            <div style="    border-bottom: 1px solid #88888852;
+            margin: 5px 0px;"></div>
+            1 일본 엔
+            <div id="exchangeCost"></div>
+        </div>
+    </div>
+
+    <div id="center">
         <div id="clock" class="lg-text">27 : 68 : 88</div>
 
         <form id="GetName" class="hidden">
@@ -34,30 +44,28 @@
             <span class="quote-who"></span>
             <span class="quote-who"></span>
         </div>
-</main>
+    </div>
 
-        <ul id="ToDo-List"></ul>
-        <form id="ToDo-Form">
-            <input placeholder="To Do를 입력하세요" type="text">
-        </form>
-
-
-        <div id="exchange">
-            <span>1USD : </span>
-            <br>
-            <span>1JPY : </span>
+        <div id="toDo" class="acryl">
+            <ul id="ToDo-List"></ul>
+            <span>
+                <form id="ToDo-Form">
+                    <input placeholder="할 일을 입력하세요" type="text">
+                </form>
+            </span>
         </div>
 
-        <div id="movie">
+        <div id="wallpaperDesc">
             <span></span>
         </div>
-    </body>
-        <script src="./JavaScrpt/Greeting.js"></script>
-        <script src="./JavaScrpt/Time.js"></script>
-        <script src="./JavaScrpt/Quote.js"></script>
-        <script src="./JavaScrpt/Wallpaper.js"></script>
-        <script src="./JavaScrpt/ToDo.js"></script>
-        <script src="./JavaScrpt/Weather.js"></script>
-        <script src="./JavaScrpt/KEY.key"></script>
-        <script src="./JavaScrpt/ExchangeRate.js"></script>
+
+</body>
+    <script src="./JavaScrpt/Greeting.js"></script>
+    <script src="./JavaScrpt/Time.js"></script>
+    <script src="./JavaScrpt/Quote.js"></script>
+    <script src="./JavaScrpt/Wallpaper.js"></script>
+    <script src="./JavaScrpt/ToDo.js"></script>
+    <script src="./JavaScrpt/Weather.js"></script>
+    <script src="./JavaScrpt/KEY.key"></script>
+    <script src="./JavaScrpt/ExchangeRate.js"></script>
 </html>
