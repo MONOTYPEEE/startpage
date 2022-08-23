@@ -30,13 +30,13 @@ body{
 #clock{
     font-weight: 700;
     font-size: 3rem;
-    
 }
 
 #weather{
     /*날씨 요소들 묶는 div*/
     text-align: center;
     width: 8rem;
+    cursor: pointer;
 }
 
 #weatherIcon{
@@ -100,52 +100,6 @@ body{
     right: 30px;
 }
 
-#toDo>span{
-    border-color: #d1d1d1 #d1d1d1 #616161 #d1d1d1;
-    border-width: 1px;
-    border-style: solid;
-    padding: 0px 10px;
-    box-sizing: border-box;
-    min-height: 32px;
-    position: relative;
-    border-radius: 4px;
-    row-gap: 2px;
-    column-gap: 2px;
-    line-height: 20px;
-    font-weight: 400;
-    background-color: white;
-}
-
-/*이쁜 Fluent Input를 만드려던 흔적
-#toDo>span::after{
-    content: "";
-    transform: scaleX(0);
-    clip-path: inset(calc(100% - 2px) 0px 0px);
-    border-bottom: solid 2px red;
-    bottom: -1px;
-    right: -1px;
-    left: -1px;
-    position: absolute;
-    box-sizing: border-box;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-    transition: transform 50ms cubic-bezier(0.7,0,1,0.5);
-    height: max(2px, 4px);
-}*/
-
-#ToDo-Form>input{
-    background-color: transparent;
-    padding: 0px 2px;
-    border: none;
-    outline: none;
-    min-width: 0px;
-    box-sizing: border-box;
-    line-height: 30px;
-    font-weight: 400;
-    font-size: 14px;
-    vertical-align: middle;
-}
-
 #ToDo-List{
     margin: 0px 0px 10px 0px;
     padding: 5px;
@@ -184,6 +138,7 @@ body{
     font-size: x-large;
     font-weight: 600;
     color: #000;
+    cursor: pointer;
 }
 
 #greeting{
@@ -191,6 +146,49 @@ body{
     font-weight: 700;
     margin-top: -5px;
     margin-bottom: 20px;
+}
+
+#quote span:first-of-type{
+    font-weight: 600;
+    font-size: larger;
+}
+
+#searchInput{
+    margin-top: 3em;
+}
+
+#searchInput>input{
+    width: 30vw;
+}
+
+#searchInput>button{
+    height: 100%;
+    width: 30px;
+}
+
+.searchAs{
+    height: 30px;
+    width: 30px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 4px;
+    background-size: contain;
+    z-index: 9;
+    cursor: pointer;
+}
+
+#naver{
+    background-image: url(https://www.naver.com/favicon.ico);    
+}
+
+#google{
+    background-image: url(https://www.google.com/favicon.ico);
+    
+}
+
+#github{
+    background-image: url(https://github.githubassets.com/favicons/favicon-dark.png);
+    background-color: black;
 }
 
 .quote-who{
@@ -203,7 +201,49 @@ body{
     font-weight: 400;
     color: rgba(255,255,255,0.8);
 }
-#quote span:first-of-type{
-    font-weight: 600;
-    font-size: larger;
+
+.fluentInputBox{
+    border-color: #d1d1d1 #d1d1d1 #616161 #d1d1d1;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    min-height: 32px;
+    position: relative;
+    border-radius: 4px;
+    row-gap: 2px;
+    column-gap: 2px;
+    line-height: 20px;
+    font-weight: 400;
+    background-color: white;
+}
+
+/*이쁜 Fluent Input를 만드려던 흔적
+#toDo>span::after{
+    content: "";
+    transform: scaleX(0);
+    clip-path: inset(calc(100% - 2px) 0px 0px);
+    border-bottom: solid 2px red;
+    bottom: -1px;
+    right: -1px;
+    left: -1px;
+    position: absolute;
+    box-sizing: border-box;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    transition: transform 50ms cubic-bezier(0.7,0,1,0.5);
+    height: max(2px, 4px);
+}*/
+
+.fluentInput{
+    background-color: transparent;
+    padding: 0px 2px;
+    border: none;
+    outline: none;
+    min-width: 0px;
+    box-sizing: border-box;
+    line-height: 30px;
+    font-weight: 400;
+    font-size: 14px;
+    vertical-align: middle;
 }

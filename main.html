@@ -8,7 +8,7 @@
     </head>
 <body>
     <div id>
-        <div id="weather" class="acryl">
+        <div id="weather" class="acryl" onclick="window.location = 'https://weather.naver.com/today';">
             <svg id="weatherIcon">
             </svg>
             <br>
@@ -19,11 +19,11 @@
 
         <div id="exchange" class="acryl">
             1 미국 달러
-            <div id="exchangeCost"></div>
+            <div id="exchangeCost" onclick="window.location = 'https://finance.naver.com/marketindex/exchangeDetail.naver?marketindexCd=FX_USDKRW';"></div>
             <div style="    border-bottom: 1px solid #88888852;
             margin: 5px 0px;"></div>
             1 일본 엔
-            <div id="exchangeCost"></div>
+            <div id="exchangeCost" onclick="window.location = 'https://finance.naver.com/marketindex/exchangeDetail.nhn?marketindexCd=FX_JPYKRW';"></div>
         </div>
     </div>
 
@@ -44,13 +44,22 @@
             <span class="quote-who"></span>
             <span class="quote-who"></span>
         </div>
+
+            <span id="searchInput" class="fluentInputBox">
+                <input class="fluentInput" placeholder="검색" type="search" autofocus >
+            </span>
+            <div>
+                <button type="button" class="searchAs" id="naver" onclick="gotoNaver();"></button>
+                <button type="button" class="searchAs" id="google" onclick="gotoGoogle();"></button>
+                <button type="button" class="searchAs" id="github" onclick="gotoGitHub();"></button>
+            </div>
     </div>
 
         <div id="toDo" class="acryl">
             <ul id="ToDo-List"></ul>
             <span>
-                <form id="ToDo-Form">
-                    <input placeholder="할 일을 입력하세요" type="text">
+                <form id="ToDo-Form" class="fluentInputBox">
+                    <input class="fluentInput" placeholder="할 일을 입력하세요" type="text" value="">
                 </form>
             </span>
         </div>
@@ -68,4 +77,5 @@
     <script src="./JavaScrpt/Weather.js"></script>
     <script src="./JavaScrpt/KEY.key"></script>
     <script src="./JavaScrpt/ExchangeRate.js"></script>
+    <script src="./JavaScrpt/search.js"></script>
 </html>
