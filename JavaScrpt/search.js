@@ -13,7 +13,3 @@ function gotoGoogle(){
 function gotoGitHub(){
     window.location =`https://github.com/search?q=${searchBar.value}`;
 }
-
-//naverButton.addEventListener('click',gotoNaver);
-//githubButton.addEventListener('click',gotoGitHub);
-//googleButton.addEventListener('click',gotoGoogle);

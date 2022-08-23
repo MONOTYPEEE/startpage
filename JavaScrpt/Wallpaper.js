@@ -47,6 +47,14 @@ const wallpaperArray = [
         fileName:"x_the_worst.jpg",
         desc:"X - pH-1",
     },
+    {
+        fileName:"travel_noah.jpg",
+        desc:"TRAVEL : NOAH - 김하온",
+    },
+    {
+        fileName:"fadeaway.jpg",
+        desc:"Fadeaway - Jvcki Wai, Coogie, Paloalto, The Quiett, 뱃사공",
+    },
     
     ];
 
