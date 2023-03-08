@@ -34,7 +34,7 @@
 
 ### 환율
 
-![](./readmeImgs/usdjpy.png)
+![](./readmeImgs/usdJPY.png)
 
 미국 달러와 일본 엔의 원화 환율을 보며 절망할 수 있습니다.
 
